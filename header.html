@@ -1,0 +1,61 @@
+<!-- header.html -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Brand logo with additional spans for mobile styling -->
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-line-1">KALAKUNJ</span>
+                <span class="brand-line-2">MUSIC ACADEMY</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="nav-home"><a class="tag_menu" href="index.html">Home</a></li>
+                <li id="nav-guru"><a class="tag_menu" href="about.html">Guru</a></li>
+                <li id="nav-courses"><a class="tag_menu" href="shows.html">Courses</a></li>
+                <li id="nav-contact"><a class="tag_menu" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Embedded CSS for mobile responsiveness -->
+<style>
+    /* Default styling for larger screens */
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .brand-line-1,
+    .brand-line-2 {
+        display: inline;
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 767px) {
+        .navbar-brand {
+            font-size: 18px;
+        }
+
+        .brand-line-1,
+        .brand-line-2 {
+            display: block;
+            text-align: center;
+        }
+
+        .brand-line-1 {
+            margin-bottom: -5px;
+        }
+
+        /* Add space between KALAKUNJ and MUSIC ACADEMY */
+        .brand-line-2 {
+            margin-top: 10px;
+        }
+    }
+</style>

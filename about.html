@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music Club</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	/* Default styling for larger screens */
+	.navbar-brand {
+		font-size: 24px;
+	}
+
+	.brand-line-1,
+	.brand-line-2 {
+		display: inline;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 767px) {
+		.navbar-brand {
+			font-size: 18px;
+		}
+
+		.brand-line-1,
+		.brand-line-2 {
+			display: block;
+			text-align: center;
+		}
+
+		.brand-line-1 {
+			margin-bottom: -5px;
+		}
+
+		/* Add space between KALAKUNJ and MUSIC ACADEMY */
+		.brand-line-2 {
+			margin-top: 10px;
+		}
+	}
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="about_top">
+		<div class="main_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about_top">
+							<h1>ABOUT US</h1>
+							<h4>People's most loved music show</h4>
+							<p>Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent<br>
+								per conubia nostra. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about_middle">
+		<div class="container">
+			<div class="row">
+				<div class="about_middle clearfix text-center">
+					<h1>OUR MUSIC STATION IS YOUR FIRST CHOICE</h1>
+				</div>
+				<div class="about_middle_1 clearfix">
+					<div class="col-sm-4">
+						<div class="about_middle_1_inner clearfix">
+							<h3><a href="#">THE EVENTS</a></h3>
+							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+								himenaeos Curabitursodales ligula in libero Sed dignissim lacinia nunc.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="about_middle_1_inner clearfix">
+							<h3><a href="#">MONEY LEADERSHIP</a></h3>
+							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+								himenaeos Curabitursodales ligula in libero Sed dignissim lacinia nunc.</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="about_middle_1_inner clearfix">
+							<h3><a href="#">DEDICATION TO OUR WORK</a></h3>
+							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+								himenaeos Curabitursodales ligula in libero Sed dignissim lacinia nunc.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="footer">
+		<div id="footer-container"></div>
+	</section>
+
+
+	<!-- WhatsApp Floating Icon -->
+	<a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+</body>
+
+</html>

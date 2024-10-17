@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music Club</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link href="css/element.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
+<style>
+	/* Default styling for larger screens */
+	.navbar-brand {
+		font-size: 24px;
+	}
+
+	.brand-line-1,
+	.brand-line-2 {
+		display: inline;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 767px) {
+		.navbar-brand {
+			font-size: 18px;
+		}
+
+		.brand-line-1,
+		.brand-line-2 {
+			display: block;
+			text-align: center;
+		}
+
+		.brand-line-1 {
+			margin-bottom: -5px;
+		}
+
+		/* Add space between KALAKUNJ and MUSIC ACADEMY */
+		.brand-line-2 {
+			margin-top: 10px;
+		}
+	}
+
+	/* WhatsApp floating button */
+	.whatsapp-float {
+		position: fixed;
+		width: 60px;
+		height: 60px;
+		bottom: 20px;
+		left: 20px;
+		background-color: #25D366;
+		color: #FFF;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 2px 2px 3px #999;
+		z-index: 1000;
+	}
+
+	.whatsapp-float .my-float {
+		margin-top: 16px;
+	}
+</style>
+
+<body>
+	<section id="header" class="about_header">
+		<div id="header-container"></div>
+	</section>
+
+	<section id="center">
+		<div class="container">
+			<div class="row">
+				<div class="center clearfix">
+					<h1>LOREM IPSUM DOLOR<br> <span>SED CURSUS DAPIBUS</span><br> NIBH ELEMENT </h1>
+					<h4>Latest launch songs</h4>
+					<p> Nulla quis sem at nibh elementum imperdiet<br> Duis sagittis ipsum Praesent mauris Fusce nec
+						tellus <br> sed augue semper porta. </p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row text-center" style="margin-top: 60px; display: flex; justify-content: space-around;">
+				<div class="col-sm-2 col-xs-6">
+					<div class="play-icon-box">
+						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Guitar</i>
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-6">
+					<div class="play-icon-box">
+						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Piano</i>
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-6">
+					<div class="play-icon-box">
+						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Tabala</i>
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-6">
+					<div class="play-icon-box">
+						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Basuri</i>
+					</div>
+				</div>
+				<div class="col-sm-2 col-xs-6">
+					<div class="play-icon-box">
+						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Sitar</i>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<section id="events_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>OUR COURSES</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<img src="img/2.jpg" alt="img05" />
+									<figcaption>
+										<h2>Music <span>Club</span> <i> Take part</i></h2>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Mon - Sat 5.00 PM</h5>
+								<h3><a href="#">INTEGER NEC ODIO</a></h3>
+								<h6>With Praesent Libero</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<img src="img/3.jpg" alt="img05" />
+									<figcaption>
+										<h2>Music <span>Club</span> <i> Take part</i></h2>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Mon - Sat 3.30 AM</h5>
+								<h3><a href="#">POOL FUNCTION</a></h3>
+								<h6>With Semper Porta</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<img src="img/4.jpg" alt="img05" />
+									<figcaption>
+										<h2>Music <span>Club</span> <i> Take part</i></h2>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Wed - Sat 8 AM</h5>
+								<h3><a href="#">MUSIC NIGHT</a></h3>
+								<h6>With Mauris Massa</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center" style="margin-top: 50px; font-size: 16px;">
+					<span><a href="shows.html" style="color: #708acc; text-decoration: none; font-weight: bold;">See all
+							courses</a></span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="feature_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<p>Nulla quis sem elementum imperdiet</p>
+					<h1>SPECIAL COURSES</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/5.jpg" alt="img02" />
+									<figcaption>
+										<h2>Music <span>Club</span></h2>
+										<p>Fusce nec tellus sed augue<br> semper porta.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Eget Nulla</h5>
+								<h3><a href="#">LOREM IPSUM DOLOR</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/6.jpg" alt="img02" />
+									<figcaption>
+										<h2>Music <span>Club</span></h2>
+										<p>Fusce nec tellus sed augue<br> semper porta.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Litora Torquent</h5>
+								<h3><a href="#">SED CURSUS ANTE DAPIBUS DIAM</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sadie">
+									<img src="img/7.jpg" alt="img02" />
+									<figcaption>
+										<h2>Music <span>Club</span></h2>
+										<p>Fusce nec tellus sed augue<br> semper porta.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h5>Conubia Nostra</h5>
+								<h3><a href="#">FUSCE NEC TELLUS</a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="team_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>GURU</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sarah">
+									<img src="img/10.jpg" alt="img13" />
+									<figcaption>
+										<h2>Music <span>Zone</span></h2>
+										<p>Class aptent taciti sociosqu ad litora torquent.</p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-sarah">
+
+									<figcaption>
+										<h2>Music <span>Zone</span></h2>
+										<p>Class aptent taciti sociosqu ad litora torquent. </p>
+										<a href="#">View more</a>
+									</figcaption>
+								</figure>
+
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="#">CONUBIA NOSTRA</a></h3>
+								<h6>Director</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<p>Recommendation</p>
+					<h1>LOREM IPSUM DOLOR SED CURSUS DAPIBUS</h1>
+					<hr>
+				</div>
+				<div class="testimonial clearfix">
+					<div class="col-sm-4">
+						<div class="testimonial_inner clearfix">
+							<div class="col-sm-2">
+								<div class="testimonial_inner_left">
+									<h2><i class="fa fa-quote-left"></i></h2>
+								</div>
+							</div>
+							<div class="col-sm-10">
+								<div class="testimonial_inner_right">
+									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
+										sed augue semper porta.</p>
+									<h3>Conubia Nostra</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="testimonial_inner clearfix">
+							<div class="col-sm-2">
+								<div class="testimonial_inner_left">
+									<h2><i class="fa fa-quote-left"></i></h2>
+								</div>
+							</div>
+							<div class="col-sm-10">
+								<div class="testimonial_inner_right">
+									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
+										sed augue semper porta.</p>
+									<h3>Litora Torquent</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="testimonial_inner clearfix">
+							<div class="col-sm-2">
+								<div class="testimonial_inner_left">
+									<h2><i class="fa fa-quote-left"></i></h2>
+								</div>
+							</div>
+							<div class="col-sm-10">
+								<div class="testimonial_inner_right">
+									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
+										sed augue semper porta.</p>
+									<h3>Eget Nulla</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>OUR GALLERY</h1>
+					<hr>
+				</div>
+				<div class="gallery_home clearfix">
+					<div class="col-sm-7">
+						<div class="gallery_home_inner clearfix">
+							<img class="img-responsive" src="img/15.jpg">
+						</div>
+					</div>
+					<div class="col-sm-5">
+						<div class="gallery_home_inner clearfix">
+							<img class="img-responsive" src="img/16.jpg">
+						</div>
+					</div>
+				</div>
+				<div class="gallery_home clearfix">
+					<div class="col-sm-5">
+						<div class="gallery_home_inner clearfix">
+							<img class="img-responsive" src="img/17.jpg">
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="gallery_home_inner clearfix">
+							<img class="img-responsive" src="img/18.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="footer">
+		<div id="footer-container"></div>
+	</section>
+
+	<!-- WhatsApp Floating Icon -->
+	<a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+	</a>
+
+	<script src="js/classie.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Load header
+			fetch("header.html")
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById("header-container").innerHTML = data;
+
+					// Add active class based on current page URL
+					const currentUrl = window.location.pathname;
+
+					// Debugging: Log current path
+					console.log("Current Path:", currentUrl);
+
+					const navLinks = {
+						'/index.html': 'nav-home',
+						'/about.html': 'nav-guru',
+						'/shows.html': 'nav-courses',
+						'/contact.html': 'nav-contact'
+					};
+
+					// Find and set active link
+					for (const [path, id] of Object.entries(navLinks)) {
+						if (currentUrl.includes(path) || (currentUrl === '/' && path === '/index.html')) {
+							document.getElementById(id).querySelector('a').classList.add('active_tab');
+						}
+					}
+				})
+				.catch(error => console.error('Error loading header:', error));
+
+			// Load footer
+			fetch("footer.html")
+				.then(response => response.text())
+				.then(data => document.getElementById("footer-container").innerHTML = data)
+				.catch(error => console.error('Error loading footer:', error));
+		});
+	</script>
+</body>
+
+</html>
