@@ -17,7 +17,79 @@
 
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
-	/* Default styling for larger screens */
+	.main {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.icon-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+		/* Fixed width for each item */
+		gap: 20px;
+		justify-content: center;
+	}
+
+	.icon-item {
+		color: #a4b4dc;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 150px;
+		/* Fixed width */
+		height: 50px;
+		/* Ensures consistent height */
+		font-size: 18px;
+		text-align: center;
+		white-space: nowrap;
+		/* Prevent text wrapping */
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* Truncate long text */
+	}
+
+	.icon-item i {
+		margin-right: 8px;
+	}
+
+	@media (max-width: 768px) {
+		.icon-grid {
+			grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+			/* Slightly smaller width for mobile */
+		}
+
+		.icon-item {
+			width: 130px;
+			/* Adjust width to accommodate longer text */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.icon-grid {
+			grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+			/* Smaller width for very small screens */
+		}
+
+		.icon-item {
+			width: 110px;
+			/* Ensure fixed width even for smaller devices */
+			font-size: 16px;
+		}
+
+		.icon-item i {
+			margin-right: 5px;
+			/* Reduce spacing for smaller screens */
+		}
+	}
+
+
+
+
+
+
+
+
 	.navbar-brand {
 		font-size: 24px;
 	}
@@ -79,43 +151,50 @@
 		<div class="container">
 			<div class="row">
 				<div class="center clearfix">
-					<h1>LOREM IPSUM DOLOR<br> <span>SED CURSUS DAPIBUS</span><br> NIBH ELEMENT </h1>
-					<h4>Latest launch songs</h4>
-					<p> Nulla quis sem at nibh elementum imperdiet<br> Duis sagittis ipsum Praesent mauris Fusce nec
-						tellus <br> sed augue semper porta. </p>
+					<h1><br> <span>EXPERT GUIDANCE IN</span><br>CLASSICAL AND MODERN MUSIC</h1>
+					<h4>Play Practice Perform</h4>
+					<p> We provide personalized instruction from experienced instructors to help
+						<br>you master classical and modern music, inspiring students of all levels
+					</p>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row text-center" style="margin-top: 60px; display: flex; justify-content: space-around;">
-				<div class="col-sm-2 col-xs-6">
-					<div class="play-icon-box">
-						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Guitar</i>
-					</div>
+		<div class="main">
+			<div class="icon-grid">
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Guitar
 				</div>
-				<div class="col-sm-2 col-xs-6">
-					<div class="play-icon-box">
-						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Piano</i>
-					</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Vocal
 				</div>
-				<div class="col-sm-2 col-xs-6">
-					<div class="play-icon-box">
-						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Tabala</i>
-					</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Violin
 				</div>
-				<div class="col-sm-2 col-xs-6">
-					<div class="play-icon-box">
-						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Basuri</i>
-					</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Tabala
 				</div>
-				<div class="col-sm-2 col-xs-6">
-					<div class="play-icon-box">
-						<i class="fa fa-play-circle" style="font-size: 30px; color: #708acc;"> Sitar</i>
-					</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Piano
+				</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Drum
+				</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Flute
+				</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Sarangi
+				</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Madal
+				</div>
+				<div class="icon-item">
+					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Harmonium
 				</div>
 			</div>
+		</div>
 
-		</div>
+
 
 	</section>
 
@@ -195,7 +274,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="events_home text-center clearfix">
-					<p>Nulla quis sem elementum imperdiet</p>
 					<h1>SPECIAL COURSES</h1>
 					<hr>
 				</div>
@@ -206,16 +284,13 @@
 								<figure class="effect-sadie">
 									<img src="img/5.jpg" alt="img02" />
 									<figcaption>
-										<h2>Music <span>Club</span></h2>
-										<p>Fusce nec tellus sed augue<br> semper porta.</p>
-										<a href="#">View more</a>
+										<a href="specialCourses.html">View more</a>
 									</figcaption>
 								</figure>
 
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Eget Nulla</h5>
-								<h3><a href="#">LOREM IPSUM DOLOR</a></h3>
+								<h3><a href="specialCourses.html">School Harmony</a></h3>
 							</div>
 						</div>
 					</div>
@@ -225,16 +300,13 @@
 								<figure class="effect-sadie">
 									<img src="img/6.jpg" alt="img02" />
 									<figcaption>
-										<h2>Music <span>Club</span></h2>
-										<p>Fusce nec tellus sed augue<br> semper porta.</p>
-										<a href="#">View more</a>
+										<a href="specialCourses.html">View more</a>
 									</figcaption>
 								</figure>
 
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Litora Torquent</h5>
-								<h3><a href="#">SED CURSUS ANTE DAPIBUS DIAM</a></h3>
+								<h3><a href="specialCourses.html">Virtual Training</a></h3>
 							</div>
 						</div>
 					</div>
@@ -244,16 +316,13 @@
 								<figure class="effect-sadie">
 									<img src="img/7.jpg" alt="img02" />
 									<figcaption>
-										<h2>Music <span>Club</span></h2>
-										<p>Fusce nec tellus sed augue<br> semper porta.</p>
-										<a href="#">View more</a>
+										<a href="specialCourses.html">View more</a>
 									</figcaption>
 								</figure>
 
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Conubia Nostra</h5>
-								<h3><a href="#">FUSCE NEC TELLUS</a></h3>
+								<h3><a href="specialCourses.html">Private Class</a></h3>
 							</div>
 						</div>
 					</div>
