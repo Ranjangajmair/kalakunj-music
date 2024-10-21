@@ -113,12 +113,13 @@ p {
 
 /*********************center****************/
 #center {
-  background-image: url(../img/1.jpg);
+  background-image: url(../img/0.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-top: 250px;
   padding-bottom: 250px;
+  height: 750px;
 }
 
 .center h1 {
@@ -429,12 +430,7 @@ figure.effect-sadie:hover h2 {
   transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
 }
 
-figure.effect-sadie:hover figcaption::before,
-figure.effect-sadie:hover p {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
+
 
 /*********************feature_home_end****************/
 
@@ -1074,8 +1070,11 @@ figure.effect-dexter:hover p {
 
 #about_top {
   background-image: url(../img/19.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the entire area */
   margin-top: 112px;
 }
+
 
 #about_top_team {
   background-image: url(../img/35.jpg);
@@ -1083,7 +1082,7 @@ figure.effect-dexter:hover p {
 }
 
 #about_top_shows {
-  background-image: url(../img/36.jpg);
+  background-image: url(../img/19.jpg);
   margin-top: 112px;
 }
 
@@ -1098,7 +1097,7 @@ figure.effect-dexter:hover p {
 }
 
 #about_top_contact {
-  background-image: url(../img/39.jpg);
+  background-image: url(../img/19.jpg);
   margin-top: 112px;
 }
 
