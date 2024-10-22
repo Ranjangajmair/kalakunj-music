@@ -112,15 +112,6 @@ p {
 /*********************header_end****************/
 
 /*********************center****************/
-#center {
-  background-image: url(../img/0.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 250px;
-  padding-bottom: 250px;
-  height: 750px;
-}
 
 .center h1 {
   color: #fff;
@@ -1071,34 +1062,30 @@ figure.effect-dexter:hover p {
 #about_top {
   background-image: url(../img/19.jpg);
   background-repeat: no-repeat;
-  background-size: cover; /* Ensures the image covers the entire area */
+  background-size: cover;
+  /* Ensures the image covers the entire area */
   margin-top: 112px;
 }
 
 
 #about_top_team {
   background-image: url(../img/35.jpg);
-  margin-top: 112px;
 }
 
 #about_top_shows {
   background-image: url(../img/19.jpg);
-  margin-top: 112px;
 }
 
 #about_top_artist {
   background-image: url(../img/37.jpg);
-  margin-top: 112px;
 }
 
 #about_top_element {
   background-image: url(../img/38.jpg);
-  margin-top: 112px;
 }
 
 #about_top_contact {
   background-image: url(../img/19.jpg);
-  margin-top: 112px;
 }
 
 .about_header .navbar {

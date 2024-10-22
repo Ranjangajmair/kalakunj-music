@@ -17,78 +17,74 @@
 
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
+	#center {
+		background-image: url(../img/0.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding-top: 250px;
+		padding-bottom: 250px;
+		height: 790px;
+	}
+
+	@media (max-width: 768px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		#center {
+			height: 1250px;
+		}
+	}
+
 	.main {
 		width: 100%;
 		padding: 20px;
 	}
 
+	/* Base layout for desktop */
 	.icon-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
-		/* Fixed width for each item */
+		grid-template-columns: repeat(5, 1fr);
 		gap: 20px;
 		justify-content: center;
 	}
 
+	/* Adjust layout for tablets (max-width: 768px) */
+	@media (max-width: 768px) {
+		.icon-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 480px) {
+		.icon-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* Ensure the icon items maintain consistent styling */
 	.icon-item {
 		color: #a4b4dc;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 150px;
-		/* Fixed width */
+		width: 100%;
 		height: 50px;
-		/* Ensures consistent height */
 		font-size: 18px;
 		text-align: center;
 		white-space: nowrap;
-		/* Prevent text wrapping */
 		overflow: hidden;
 		text-overflow: ellipsis;
-		/* Truncate long text */
 	}
 
 	.icon-item i {
 		margin-right: 8px;
 	}
-
-	@media (max-width: 768px) {
-		.icon-grid {
-			grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-			/* Slightly smaller width for mobile */
-		}
-
-		.icon-item {
-			width: 130px;
-			/* Adjust width to accommodate longer text */
-		}
-	}
-
-	@media (max-width: 480px) {
-		.icon-grid {
-			grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-			/* Smaller width for very small screens */
-		}
-
-		.icon-item {
-			width: 110px;
-			/* Ensure fixed width even for smaller devices */
-			font-size: 16px;
-		}
-
-		.icon-item i {
-			margin-right: 5px;
-			/* Reduce spacing for smaller screens */
-		}
-	}
-
-
-
-
-
-
-
 
 	.navbar-brand {
 		font-size: 24px;
@@ -151,10 +147,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="center clearfix">
-					<h1><br> <span>EXPERT GUIDANCE IN</span><br>CLASSICAL AND MODERN MUSIC</h1>
+					<h1>EXPERT GUIDANCE<br> <span>IN CLASSICAL AND</span><br>MODERN MUSIC</h1>
 					<h4>Play Practice Perform</h4>
-					<p> We provide personalized instruction from experienced instructors to help
-						<br>you master classical and modern music, inspiring students of all levels
+					<p> We provide personalized instruction from
+						<br>
+						experienced instructors to help you master classical and
+						<br>modern music, inspiring students of all levels
 					</p>
 				</div>
 			</div>
@@ -211,17 +209,13 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/2.jpg" alt="img05" />
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/2.jpg" alt="img05" />
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 5.00 PM</h5>
-								<h3><a href="#">INTEGER NEC ODIO</a></h3>
-								<h6>With Praesent Libero</h6>
+								<h3><a href="Courses.html"> Vocal (Classical, Modern, Folk, Ghazals)</a></h3>
 							</div>
 						</div>
 					</div>
@@ -229,17 +223,14 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/3.jpg" alt="img05" />
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/3.jpg" alt="img05" />
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 3.30 AM</h5>
-								<h3><a href="#">POOL FUNCTION</a></h3>
-								<h6>With Semper Porta</h6>
+								<h3><a href="Courses.html">Tabla (Classical, Light including Madal, Naal, Dholak,
+										Mridangam) </a></h3>
 							</div>
 						</div>
 					</div>
@@ -247,20 +238,18 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/4.jpg" alt="img05" />
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/4.jpg" alt="img05" />
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Wed - Sat 8 AM</h5>
-								<h3><a href="#">MUSIC NIGHT</a></h3>
-								<h6>With Mauris Massa</h6>
+								<h3><a href="Courses.html">Violin (Classical, Eastern, and Western)</a></h3>
 							</div>
 						</div>
 					</div>
+
+
 				</div>
 				<div class="text-center" style="margin-top: 50px; font-size: 16px;">
 					<span><a href="shows.html" style="color: #708acc; text-decoration: none; font-weight: bold;">See all
@@ -356,33 +345,44 @@
 					</div>
 					<div class="col-sm-8">
 						<div class="events_home_1_inner clearfix">
-							<div class="grid clearfix">
-								<figure class="effect-sarah">
+							<div style="color: white; font-size: 16px; margin-top: 40px;">
+								With an inspiring journey of over 30 years in music sadhana, Nishant Banyat has
+								dedicated his life
+								to the art of music, teaching and inspiring countless students across various genres.
+								Specializing
+								in both Eastern and Western music, he imparts his extensive knowledge through
+								instruction in guitar,
+								sitar, drums, vocals, piano, and flute. Over the years, he has trained thousands of
+								individuals and
+								groups, helping them unlock their musical potential and develop their skills.
+								</br>
+								</br>
 
-									<figcaption>
-										<h2>Music <span>Zone</span></h2>
-										<p>Class aptent taciti sociosqu ad litora torquent. </p>
-										<a href="#">View more</a>
-									</figcaption>
-								</figure>
-
+								Nishant's commitment to creativity and excellence culminated in an extraordinary
+								achievement: his
+								team successfully filmed the highest altitude music video on land at an astonishing
+								elevation of
+								5,105 meters (16,748 feet 8.2 inches) in Tilicho, Nepal. This remarkable milestone has
+								earned a
+								place in the illustrious pages of the Guinness World Records, symbolizing the
+								perseverance,
+								creativity, and indomitable spirit of human endeavor.
 							</div>
-							<div class="events_home_1_inner_text clearfix text-center">
-								<h3><a href="#">CONUBIA NOSTRA</a></h3>
-								<h6>Director</h6>
-							</div>
+						</div>
+						<div class="text-right" style="margin-top: 50px; font-size: 16px;">
+							<span><a href="about.html"
+									style="color: #708acc; text-decoration: none; font-weight: bold;">See all</a></span>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
 	<section id="testimonial">
 		<div class="container">
 			<div class="row">
 				<div class="events_home text-center clearfix">
-					<p>Recommendation</p>
+					<p>Reviews</p>
 					<h1>LOREM IPSUM DOLOR SED CURSUS DAPIBUS</h1>
 					<hr>
 				</div>

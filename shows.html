@@ -17,6 +17,20 @@
 
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
+	#about_top_shows {
+		margin-top: 112px;
+	}
+
+
+	@media (max-width: 768px) {
+		#about_top_shows {
+			margin-top: 0px;
+		}
+
+	}
+
+
+
 	/* Default styling for larger screens */
 	.navbar-brand {
 		font-size: 24px;
@@ -68,6 +82,48 @@
 	.whatsapp-float .my-float {
 		margin-top: 16px;
 	}
+
+	.events_home_1_inner_text {
+		display: flex;
+		justify-content: center;
+		width: 300px;
+	}
+
+	@media (max-width: 992px) {
+		.events_home_1_inner_text {
+			display: flex;
+			justify-content: start;
+			width: 300px;
+		}
+
+		.cardDiv {
+			width: 50%;
+		}
+
+	}
+
+	@media (max-width: 768px) {
+		.cardDiv {
+			display: flex;
+			justify-content: center;
+			width: auto;
+		}
+
+		.events_home_1_inner_text {
+			display: flex;
+			justify-content: center;
+			width: auto;
+
+		}
+
+		.about_top_shows {
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+
+
+
+	}
 </style>
 
 <body>
@@ -83,9 +139,6 @@
 						<div class="about_top">
 							<h1>COURSES</h1>
 							<h4>Our popular courses</h4>
-							<p>Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent
-								<br>per conubia nostra.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -97,172 +150,110 @@
 		<div class="container">
 			<div class="row">
 				<div class="events_home_1 clearfix shows_page">
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/2.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/2.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 5.00 PM</h5>
-								<h3><a href="#">INTEGER NEC ODIO</a></h3>
-								<h6>With Praesent Libero</h6>
+								<h4><a href="Courses.html">Vocal (Classical, Modern, Folk, Ghazals)</a></h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/3.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/3.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 3.30 AM</h5>
-								<h3><a href="#">POOL FUNCTION</a></h3>
-								<h6>With Semper Porta</h6>
+								<h4><a href="Courses.html">Tabla (Classical, Light including Madal, Naal, Dholak,
+										Mridangam) </a>
+								</h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/4.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/4.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Wed - Sat 8 AM</h5>
-								<h3><a href="#">MUSIC NIGHT</a></h3>
-								<h6>With Mauris Massa</h6>
+								<h4><a href="Courses.html">Violin (Classical, Eastern, and Western)</a></h4>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="events_home_1 clearfix shows_page">
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/20.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/21.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 5.00 PM</h5>
-								<h3><a href="#">INTEGER NEC ODIO</a></h3>
-								<h6>With Praesent Libero</h6>
+								<h4><a href="Courses.html">Guitar (Classical, Eastern, Western, Jazz, Metal, Blues, Pop,
+										Reggae)
+									</a></h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/21.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/22.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 3.30 AM</h5>
-								<h3><a href="#">POOL FUNCTION</a></h3>
-								<h6>With Semper Porta</h6>
+								<h4><a href="Courses.html">Piano/Keyboard </a></h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/22.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/23.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Wed - Sat 8 AM</h5>
-								<h3><a href="#">MUSIC NIGHT</a></h3>
-								<h6>With Mauris Massa</h6>
+								<h4><a href="Courses.html">Drums/Congo</a></h4>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="events_home_1 clearfix shows_page">
-					<div class="col-sm-4 space_left">
+					<div class="cardDiv col-sm-4 space_left" style="margin-bottom: 20px;">
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-honey">
-									<img src="img/23.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
+									<a href="Courses.html">
+										<img src="img/24.jpg" alt="img05">
+									</a>
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 5.00 PM</h5>
-								<h3><a href="#">INTEGER NEC ODIO</a></h3>
-								<h6>With Praesent Libero</h6>
+								<h4><a href="Courses.html">Harmonium, Flute, Sarangi
+									</a></h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4 space_left">
-						<div class="events_home_1_inner clearfix">
-							<div class="grid clearfix">
-								<figure class="effect-honey">
-									<img src="img/24.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
-								</figure>
-							</div>
-							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Mon - Sat 3.30 AM</h5>
-								<h3><a href="#">POOL FUNCTION</a></h3>
-								<h6>With Semper Porta</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 space_left">
-						<div class="events_home_1_inner clearfix">
-							<div class="grid clearfix">
-								<figure class="effect-honey">
-									<img src="img/25.jpg" alt="img05">
-									<figcaption>
-										<h2>Music <span>Club</span> <i> Take part</i></h2>
-										<a href="#">View more</a>
-									</figcaption>
-								</figure>
-							</div>
-							<div class="events_home_1_inner_text clearfix text-center">
-								<h5>Wed - Sat 8 AM</h5>
-								<h3><a href="#">MUSIC NIGHT</a></h3>
-								<h6>With Mauris Massa</h6>
-							</div>
-						</div>
-					</div>
+
 				</div>
 
 			</div>
@@ -273,10 +264,10 @@
 		<div id="footer-container"></div>
 	</section>
 
-	 <!-- WhatsApp Floating Icon -->
-	 <a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </a>
+	<!-- WhatsApp Floating Icon -->
+	<a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+	</a>
 
 
 	<script src="js/classie.js"></script>
