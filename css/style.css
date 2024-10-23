@@ -802,9 +802,7 @@ figure.effect-dexter:hover p {
   margin-top: 20px;
 }
 
-.gallery_home_inner img {
-
-}
+.gallery_home_inner img {}
 
 .gallery_home_inner img:hover {
   filter: none;
@@ -1064,6 +1062,13 @@ figure.effect-dexter:hover p {
   background-image: url(../img/50.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Use a different image for screens smaller than 600px */
+@media (max-width: 600px) {
+  #about_top_about {
+    background-image: url(../img/77.jpeg);
+  }
 }
 
 
