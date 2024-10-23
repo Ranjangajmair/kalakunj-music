@@ -8,10 +8,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- Brand logo with additional spans for mobile styling -->
-            <a class="navbar-brand" href="index.html">
-                <span class="brand-line-1">KALAKUNJ</span> MUSIC ACADEMY
-            </a>
+            <div class="navBar-main">
+                <div>
+                    <img style="height: 70px;" src="img/Kalakunj_Logo01.png" alt="img05" />
+                </div>
+
+                <a class="navbar-brand" href="index.html" style="display: flex;">
+                    <div class="nameDiv">
+                        <span class="brand-line-1">KALAKUNJ</span>
+                        <div>
+                            MUSIC ACADEMY
+                        </div>
+                    </div>
+                    <img style="height: 18px;" src="img/Title.png" alt="img05" />
+                </a>
+            </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -26,9 +37,26 @@
 
 <!-- Embedded CSS for mobile responsiveness -->
 <style>
+    .nameDiv {
+        margin-bottom: 3px;
+    }
+
+    .navBar-main {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
     /* Default styling for larger screens */
     .navbar-brand {
-        font-size: 24px;
+        font-size: 15px;
     }
 
     .brand-line-1,
@@ -38,14 +66,27 @@
 
     /* Responsive styling for smaller screens */
     @media (max-width: 767px) {
+
+        .navBar-main {
+            gap: 1px;
+        }
+
+        .nameDiv {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+
         .navbar-brand {
             font-size: 18px;
+            padding: 0px;
         }
 
         .brand-line-1,
         .brand-line-2 {
             display: block;
-            text-align: center;
+            text-align: start;
         }
 
         .brand-line-1 {

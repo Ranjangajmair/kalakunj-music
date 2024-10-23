@@ -18,14 +18,26 @@
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
 	#center {
-		background-image: url(../img/0.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		padding-top: 250px;
+		padding-top: 180px;
 		padding-bottom: 250px;
-		height: 790px;
+		height: 800px;
 	}
+
+	@media (max-width: 1322) {
+		#center {
+			height: 1300px;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		#center {
+			height: 1000px;
+		}
+	}
+
 
 	@media (max-width: 768px) {
 		#center {
@@ -35,32 +47,40 @@
 
 	@media (max-width: 480px) {
 		#center {
-			height: 1250px;
+			height: 1150px;
+			padding-top: 50px;
 		}
 	}
 
 	.main {
 		width: 100%;
-		padding: 20px;
+		padding: 0 40px;
+		/* Increase padding on the sides */
 	}
 
 	/* Base layout for desktop */
 	.icon-grid {
+		margin-top: 40px;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		gap: 20px;
+		/* Reduced gap between icon items */
 		justify-content: center;
+		padding: 0 210px;
+		/* Add padding to the grid for spacing on the sides */
 	}
 
 	/* Adjust layout for tablets (max-width: 768px) */
-	@media (max-width: 768px) {
+	@media (max-width: 1000px) {
 		.icon-grid {
 			grid-template-columns: repeat(3, 1fr);
+			padding: 0 20px;
+
 		}
 	}
 
 	/* Adjust layout for mobile (max-width: 480px) */
-	@media (max-width: 480px) {
+	@media (max-width: 570px) {
 		.icon-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -69,53 +89,54 @@
 	/* Ensure the icon items maintain consistent styling */
 	.icon-item {
 		color: #a4b4dc;
+		background-color: rgb(34, 33, 43);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
+		width: auto;
+		min-width: 150px;
+		/* Adjusted to fill full width */
 		height: 50px;
 		font-size: 18px;
 		text-align: center;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		animation: gentle-glow 2s infinite ease-in-out;
+		padding: 10px;
+		border-radius: 10px;
 	}
 
+	@media (max-width: 730px) {
+		.icon-item {
+			width: 150px;
+		}
+	}
+
+	/* Adjust layout for mobile (max-width: 480px) */
+	@media (max-width: 480px) {
+		.icon-item {
+			width: 130px;
+
+		}
+	}
+
+	/* Adjust the margin for icons to create proper spacing between icon and text */
 	.icon-item i {
-		margin-right: 8px;
+		margin-right: 10px;
+		/* Adjust the gap between icon and text */
+		font-size: 20px;
+		/* Ensure the icon size is consistent */
+		color: #a4b4dc;
+		/* Keep the icon color the same */
 	}
 
-	.navbar-brand {
-		font-size: 24px;
+	/* Add a transition effect to smooth out hover effects */
+	.icon-item:hover {
+		box-shadow: 0 0 15px #a4b4dc, 0 0 30px #a4b4dc;
 	}
 
-	.brand-line-1,
-	.brand-line-2 {
-		display: inline;
-	}
-
-	/* Responsive styling for smaller screens */
-	@media (max-width: 767px) {
-		.navbar-brand {
-			font-size: 18px;
-		}
-
-		.brand-line-1,
-		.brand-line-2 {
-			display: block;
-			text-align: center;
-		}
-
-		.brand-line-1 {
-			margin-bottom: -5px;
-		}
-
-		/* Add space between KALAKUNJ and MUSIC ACADEMY */
-		.brand-line-2 {
-			margin-top: 10px;
-		}
-	}
 
 	/* WhatsApp floating button */
 	.whatsapp-float {
@@ -136,6 +157,92 @@
 	.whatsapp-float .my-float {
 		margin-top: 16px;
 	}
+
+	/* Gentle glowing effect for icon and text */
+	@keyframes gentle-glow {
+		0% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+
+		50% {
+			box-shadow: 0 0 10px #a4b4dc, 0 0 15px #a4b4dc;
+		}
+
+		100% {
+			box-shadow: 0 0 5px #a4b4dc, 0 0 10px #a4b4dc;
+		}
+	}
+
+
+
+	.text {
+		font-size: 18px;
+		color: #adacac;
+		margin-top: 15px;
+
+	}
+
+
+	/* Icon item styling with hover and click animations */
+	.icon-item {
+		cursor: pointer;
+		position: relative;
+		padding-bottom: 10px;
+		transition: transform 0.2s ease-in-out;
+		background-color: rgb(34, 33, 43);
+		color: #a4b4dc;
+		padding: 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	/* Hover effect on icon-item */
+	.icon-item:hover {
+		transform: scale(1.1);
+		/* Slightly enlarge the icon */
+	}
+
+	/* Click effect animation on icon-item */
+	.icon-item:active {
+		transform: scale(0.95);
+		/* Shrink slightly when clicked */
+	}
+
+	/* Progress bar styling */
+	.progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 5px;
+		width: 0;
+		/* Initially set to 0 */
+		background-color: #4caf50;
+		/* Green progress color */
+		transition: width 0.1s ease;
+	}
+
+	.events_home_10 {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+		}
+
+
+	@media (max-width: 1024px) {
+		.events_home_10 {
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+		}
+
+		.events_home_10_inner {
+			display: flex;
+			justify-content: center;
+		}
+	}
+</style>
+
 </style>
 
 <body>
@@ -159,38 +266,79 @@
 		</div>
 		<div class="main">
 			<div class="icon-grid">
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Guitar
+				<!-- Guitar -->
+				<div class="icon-item" id="guitar-icon">
+					<i class="fa fa-play-circle"></i> Guitar
+					<div class="progress-bar" id="guitar-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Vocal
+				<audio id="guitar-audio" src="sounds/guitar.mp3" preload="auto"></audio>
+
+				<!-- Vocal -->
+				<div class="icon-item" id="vocal-icon">
+					<i class="fa fa-play-circle"></i> Vocal
+					<div class="progress-bar" id="vocal-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Violin
+				<audio id="vocal-audio" src="sounds/vocal.mp3" preload="auto"></audio>
+
+				<!-- Violin -->
+				<div class="icon-item" id="violin-icon">
+					<i class="fa fa-play-circle"></i> Violin
+					<div class="progress-bar" id="violin-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Tabala
+				<audio id="violin-audio" src="sounds/violin.mp3" preload="auto"></audio>
+
+				<!-- Tabala -->
+				<div class="icon-item" id="tabala-icon">
+					<i class="fa fa-play-circle"></i> Tabala
+					<div class="progress-bar" id="tabala-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Piano
+				<audio id="tabala-audio" src="sounds/tabla.mp3" preload="auto"></audio>
+
+				<!-- Piano -->
+				<div class="icon-item" id="piano-icon">
+					<i class="fa fa-play-circle"></i> Piano
+					<div class="progress-bar" id="piano-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Drum
+				<audio id="piano-audio" src="sounds/piano.mp3" preload="auto"></audio>
+
+				<!-- Drum -->
+				<div class="icon-item" id="drum-icon">
+					<i class="fa fa-play-circle"></i> Drum
+					<div class="progress-bar" id="drum-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Flute
+				<audio id="drum-audio" src="sounds/drum.mp3" preload="auto"></audio>
+
+				<!-- Flute -->
+				<div class="icon-item" id="flute-icon">
+					<i class="fa fa-play-circle"></i> Flute
+					<div class="progress-bar" id="flute-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Sarangi
+				<audio id="flute-audio" src="sounds/flute.mp3" preload="auto"></audio>
+
+				<!-- Sarangi -->
+				<div class="icon-item" id="sarangi-icon">
+					<i class="fa fa-play-circle"></i> Sarangi
+					<div class="progress-bar" id="sarangi-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Madal
+				<audio id="sarangi-audio" src="sounds/sarangi.mp3" preload="auto"></audio>
+
+				<!-- Madal -->
+				<div class="icon-item" id="madal-icon">
+					<i class="fa fa-play-circle"></i> Madal
+					<div class="progress-bar" id="madal-progress"></div>
 				</div>
-				<div class="icon-item">
-					<i class="fa fa-play-circle" style="font-size: 20px; color: #a4b4dc;"></i> Harmonium
+				<audio id="madal-audio" src="sounds/madal.wav" preload="auto"></audio>
+
+				<!-- Harmonium -->
+				<div class="icon-item" id="harmonium-icon">
+					<i class="fa fa-play-circle"></i> Harmonium
+					<div class="progress-bar" id="harmonium-progress"></div>
 				</div>
+				<audio id="harmonium-audio" src="sounds/harmonium.wav" preload="auto"></audio>
 			</div>
 		</div>
+
+
 
 
 
@@ -215,7 +363,7 @@
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h3><a href="Courses.html"> Vocal (Classical, Modern, Folk, Ghazals)</a></h3>
+								<h3><a href="Courses.html"> Vocal</a></h3>
 							</div>
 						</div>
 					</div>
@@ -229,8 +377,7 @@
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h3><a href="Courses.html">Tabla (Classical, Light including Madal, Naal, Dholak,
-										Mridangam) </a></h3>
+								<h3><a href="Courses.html">Tabla</a></h3>
 							</div>
 						</div>
 					</div>
@@ -244,7 +391,7 @@
 								</figure>
 							</div>
 							<div class="events_home_1_inner_text clearfix text-center">
-								<h3><a href="Courses.html">Violin (Classical, Eastern, and Western)</a></h3>
+								<h3><a href="Courses.html">Violin</a></h3>
 							</div>
 						</div>
 					</div>
@@ -327,25 +474,20 @@
 					<h1>GURU</h1>
 					<hr>
 				</div>
-				<div class="events_home_1 clearfix">
-					<div class="col-sm-4">
-						<div class="events_home_1_inner clearfix">
+				<div class="events_home_10 clearfix">
+					<div class="">
+						<div class="events_home_10_inner clearfix">
 							<div class="grid clearfix">
-								<figure class="effect-sarah">
-									<img src="img/10.jpg" alt="img13" />
-									<figcaption>
-										<h2>Music <span>Zone</span></h2>
-										<p>Class aptent taciti sociosqu ad litora torquent.</p>
-										<a href="#">View more</a>
-									</figcaption>
+								<figure>
+									<img style="min-width: 100px;" src="img/10.jpeg" alt="img13" />
 								</figure>
 
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-8">
+					<div class="">
 						<div class="events_home_1_inner clearfix">
-							<div style="color: white; font-size: 16px; margin-top: 40px;">
+							<div class="text">
 								With an inspiring journey of over 30 years in music sadhana, Nishant Banyat has
 								dedicated his life
 								to the art of music, teaching and inspiring countless students across various genres.
@@ -523,6 +665,99 @@
 				.catch(error => console.error('Error loading footer:', error));
 		});
 	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let currentlyPlayingAudio = null;  // To keep track of the currently playing audio
+			let currentlyPlayingIcon = null;   // To keep track of the currently playing icon
+
+			// Function to handle audio play/pause and icon change
+			function handleAudioPlayPause(audioId, progressId, iconId) {
+				const audioElement = document.getElementById(audioId);
+				const progressBar = document.getElementById(progressId);
+				const iconElement = document.getElementById(iconId).querySelector('i'); // The icon inside the div
+
+				// Pause any currently playing audio
+				if (currentlyPlayingAudio && currentlyPlayingAudio !== audioElement) {
+					currentlyPlayingAudio.pause();
+					currentlyPlayingAudio.currentTime = 0;  // Reset audio
+					currentlyPlayingIcon.classList.remove('fa-pause-circle');
+					currentlyPlayingIcon.classList.add('fa-play-circle');
+				}
+
+				// Play or pause the current audio
+				if (audioElement.paused) {
+					audioElement.play();
+					iconElement.classList.remove('fa-play-circle');
+					iconElement.classList.add('fa-pause-circle');
+
+					// Track the current audio and icon as playing
+					currentlyPlayingAudio = audioElement;
+					currentlyPlayingIcon = iconElement;
+				} else {
+					audioElement.pause();
+					iconElement.classList.remove('fa-pause-circle');
+					iconElement.classList.add('fa-play-circle');
+				}
+
+				// Update the progress bar as the audio plays
+				audioElement.addEventListener("timeupdate", function () {
+					const percentage = (audioElement.currentTime / audioElement.duration) * 100;
+					progressBar.style.width = percentage + "%";
+				});
+
+				// Reset the progress bar and icon when the audio ends
+				audioElement.addEventListener("ended", function () {
+					progressBar.style.width = "0%";
+					iconElement.classList.remove('fa-pause-circle');
+					iconElement.classList.add('fa-play-circle');
+				});
+			}
+
+			// Add event listeners for each icon
+			document.getElementById("guitar-icon").addEventListener("click", function () {
+				handleAudioPlayPause("guitar-audio", "guitar-progress", "guitar-icon");
+			});
+
+			document.getElementById("vocal-icon").addEventListener("click", function () {
+				handleAudioPlayPause("vocal-audio", "vocal-progress", "vocal-icon");
+			});
+
+			document.getElementById("violin-icon").addEventListener("click", function () {
+				handleAudioPlayPause("violin-audio", "violin-progress", "violin-icon");
+			});
+
+			document.getElementById("tabala-icon").addEventListener("click", function () {
+				handleAudioPlayPause("tabala-audio", "tabala-progress", "tabala-icon");
+			});
+
+			document.getElementById("piano-icon").addEventListener("click", function () {
+				handleAudioPlayPause("piano-audio", "piano-progress", "piano-icon");
+			});
+
+			document.getElementById("drum-icon").addEventListener("click", function () {
+				handleAudioPlayPause("drum-audio", "drum-progress", "drum-icon");
+			});
+
+			document.getElementById("flute-icon").addEventListener("click", function () {
+				handleAudioPlayPause("flute-audio", "flute-progress", "flute-icon");
+			});
+
+			document.getElementById("sarangi-icon").addEventListener("click", function () {
+				handleAudioPlayPause("sarangi-audio", "sarangi-progress", "sarangi-icon");
+			});
+
+			document.getElementById("madal-icon").addEventListener("click", function () {
+				handleAudioPlayPause("madal-audio", "madal-progress", "madal-icon");
+			});
+
+			document.getElementById("harmonium-icon").addEventListener("click", function () {
+				handleAudioPlayPause("harmonium-audio", "harmonium-progress", "harmonium-icon");
+			});
+		});
+
+	</script>
+
 </body>
 
 </html>
