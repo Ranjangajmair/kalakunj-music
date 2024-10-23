@@ -223,10 +223,10 @@
 	}
 
 	.events_home_10 {
-			display: flex;
-			flex-direction: row;
-			gap: 20px;
-		}
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
 
 
 	@media (max-width: 1024px) {
@@ -621,7 +621,7 @@
 		<div id="footer-container"></div>
 	</section>
 
-	
+
 	<script src="js/classie.js"></script>
 	<script src="js/cbpAnimatedHeader.js"></script>
 	<script>
@@ -750,9 +750,22 @@
 			document.getElementById("harmonium-icon").addEventListener("click", function () {
 				handleAudioPlayPause("harmonium-audio", "harmonium-progress", "harmonium-icon");
 			});
-		});
 
+			// Event listener to detect clicks outside the icon-grid and stop audio
+			document.addEventListener("click", function (event) {
+				const iconGrid = document.querySelector('.icon-grid');
+				if (!iconGrid.contains(event.target)) {
+					if (currentlyPlayingAudio) {
+						currentlyPlayingAudio.pause();
+						currentlyPlayingAudio.currentTime = 0;  // Reset audio
+						currentlyPlayingIcon.classList.remove('fa-pause-circle');
+						currentlyPlayingIcon.classList.add('fa-play-circle');
+					}
+				}
+			});
+		});
 	</script>
+
 
 </body>
 
