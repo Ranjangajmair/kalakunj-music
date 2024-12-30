@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Music Club</title>
+
+	<title>Home - Kalakunj Music Academy</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/Kalakunj_Logo.png">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
@@ -13,6 +16,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">"
+
+	<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+	<!-- Owl Carousel JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 </head>
 
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
@@ -243,6 +256,256 @@
 	}
 </style>
 
+<style>
+	.review-card h4 {
+		color: #333;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.review-stars {
+		margin-bottom: 10px;
+		color: #FFD700;
+		/* Gold color for stars */
+	}
+
+	.review-card p {
+		color: #666;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+
+
+	.owl-carousel .item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+
+	/* Owl Carousel Navigation Styling */
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		pointer-events: none;
+		/* Allows clicks to pass through */
+		z-index: 2;
+		/* Ensures buttons stay on top */
+	}
+
+	.owl-nav button {
+		background: none;
+		border: none;
+		font-size: 2rem;
+		pointer-events: all;
+		color: #fff;
+		/* White color for navigation icons */
+		cursor: pointer;
+	}
+
+	.owl-nav button.owl-prev {
+		position: absolute;
+		left: -50px;
+		/* Move button outside the review card area */
+		z-index: 10;
+	}
+
+	.owl-nav button.owl-next {
+		position: absolute;
+		right: -50px;
+		/* Move button outside the review card area */
+		z-index: 10;
+	}
+
+	/* Make the navigation icons white */
+	.fas.fa-chevron-left,
+	.fas.fa-chevron-right {
+		font-size: 30px;
+		color: #fff;
+		/* Set icon color to white */
+	}
+
+	/* Optional: Add hover effect to icons */
+	.owl-nav button:hover {
+		color: #f0f0f0;
+		/* Slightly lighter white on hover */
+	}
+
+	/* Responsive fix for mobile and tablet */
+	@media (max-width: 768px) {
+		.owl-nav button {
+			font-size: 1.5rem;
+			/* Decrease size for smaller screens */
+		}
+
+		.owl-nav button.owl-prev {
+			left: -25px;
+			/* Further adjust for smaller screens */
+		}
+
+		.owl-nav button.owl-next {
+			right: -25px;
+			/* Further adjust for smaller screens */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.owl-nav button {
+			font-size: 1.2rem;
+			/* Even smaller size for very small screens */
+		}
+
+		.owl-nav button.owl-prev {
+			left: -15px;
+			/* Adjust for mobile view */
+		}
+
+		.owl-nav button.owl-next {
+			right: -15px;
+			/* Adjust for mobile view */
+		}
+	}
+
+	/* Review Card Styling */
+	.review-card {
+		background-color: #f9f9f9;
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		margin: 15px;
+		width: 300px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* Ensure navigation buttons don't overlap the reviews */
+	.owl-carousel .item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+	}
+
+
+
+	/* Custom buttons for reviews */
+	.review-buttons {
+		margin-top: 20px;
+	}
+
+	.btn-primary {
+		background-color: #007bff;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 5px;
+		text-decoration: none;
+	}
+
+	.view-all-reviews {
+		display: inline-block;
+		margin-top: 10px;
+		color: #007bff;
+		text-decoration: none;
+	}
+
+	.view-all-reviews:hover {
+		text-decoration: underline;
+	}
+
+
+
+	.events_home h1 {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+
+	iframe {
+		border-radius: 8px;
+	}
+
+	/* Tablet view (768px and below) */
+	@media (max-width: 768px) {
+		.events_home h1 {
+			font-size: 2rem;
+		}
+
+		iframe {
+			height: 450px;
+		}
+	}
+
+	/* Mobile view (576px and below) */
+	@media (max-width: 576px) {
+		.events_home h1 {
+			font-size: 1.8rem;
+		}
+
+		iframe {
+			height: 300px;
+		}
+	}
+</style>
+
+
+
+
+<style>
+	.col-sm-8 {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		/* Adjust column size dynamically */
+		gap: 16px;
+		/* Add spacing between grid items */
+		padding: 16px;
+		/* Add padding around the grid */
+		width: 100%;
+		/* Ensure it covers the full width */
+		box-sizing: border-box;
+		/* Include padding in width calculation */
+	}
+
+	.gallery_home_inner {
+		position: relative;
+		overflow: hidden;
+		border-radius: 8px;
+		/* Optional: Add rounded corners */
+	}
+
+	.img-responsive {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		/* Ensure images cover their container without distortion */
+		display: block;
+	}
+
+	.maindiv {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	@media (max-width: 768px) {
+		.col-sm-8 {
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			/* Adjust for smaller screens */
+			gap: 12px;
+			padding: 8px;
+		}
+
+		.maindiv {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
 </style>
 
 <body>
@@ -406,7 +669,27 @@
 		</div>
 	</section>
 
+
 	<section id="feature_home">
+		<div class="container">
+			<div class="row">
+				<div class="events_home text-center clearfix">
+					<h1>Watch Now</h1>
+					<hr>
+				</div>
+				<div class="events_home_1 clearfix">
+					<iframe width="100%" height="616" src="https://www.youtube.com/embed/3rpL_27EnTM"
+						title="Vocal Practice Session at Kalakunja Sangeet Pathsala" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="events_home">
 		<div class="container">
 			<div class="row">
 				<div class="events_home text-center clearfix">
@@ -418,7 +701,7 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-sadie">
-									<img src="img/5.jpg" alt="img02" />
+									<img src="img/school harmony.png" alt="img02" />
 									<figcaption>
 										<a href="specialCourses.html">View more</a>
 									</figcaption>
@@ -434,7 +717,7 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-sadie">
-									<img src="img/6.jpg" alt="img02" />
+									<img src="img/virtual training.png" alt="img02" />
 									<figcaption>
 										<a href="specialCourses.html">View more</a>
 									</figcaption>
@@ -450,7 +733,7 @@
 						<div class="events_home_1_inner clearfix">
 							<div class="grid clearfix">
 								<figure class="effect-sadie">
-									<img src="img/7.jpg" alt="img02" />
+									<img src="img/private class.png" alt="img02" />
 									<figcaption>
 										<a href="specialCourses.html">View more</a>
 									</figcaption>
@@ -467,149 +750,135 @@
 		</div>
 	</section>
 
-	<section id="team_home">
+	<section id="feature_home">
 		<div class="container">
 			<div class="row">
 				<div class="events_home text-center clearfix">
-					<h1>GURU</h1>
+					<h1>OUR TEACHERS</h1>
 					<hr>
 				</div>
-				<div class="events_home_10 clearfix">
-					<div class="">
-						<div class="events_home_10_inner clearfix">
-							<div class="grid clearfix">
-								<figure>
-									<img style="min-width: 100px;" src="img/10.jpeg" alt="img13" />
-								</figure>
-
-							</div>
-						</div>
-					</div>
-					<div class="">
+				<div class="events_home_1 clearfix">
+					<div class="col-sm-4 space_left">
 						<div class="events_home_1_inner clearfix">
-							<div class="text">
-								With an inspiring journey of over 30 years in music sadhana, Nishant Banyat has
-								dedicated his life
-								to the art of music, teaching and inspiring countless students across various genres.
-								Specializing
-								in both Eastern and Western music, he imparts his extensive knowledge through
-								instruction in guitar,
-								sitar, drums, vocals, piano, and flute. Over the years, he has trained thousands of
-								individuals and
-								groups, helping them unlock their musical potential and develop their skills.
-								</br>
-								</br>
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="teacher1.html">
+										<img src="img/teachers/77.jpeg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html"> Arjun Basnyat ( Nishant ) - Guitar / Drum
+									</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="teacher2.html">
+										<img src="img/teachers/78.jpeg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html">Gautam Shrestha - Tabala
+									</a></h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 space_left">
+						<div class="events_home_1_inner clearfix">
+							<div class="grid clearfix">
+								<figure class="effect-honey">
+									<a href="teacher3.html">
+										<img src="img/27.jpg" alt="img05" />
+									</a>
+								</figure>
+							</div>
+							<div class="events_home_1_inner_text clearfix text-center">
+								<h3><a href="Courses.html">- Vocal
+									</a></h3>
+							</div>
+						</div>
+					</div>
 
-								Nishant's commitment to creativity and excellence culminated in an extraordinary
-								achievement: his
-								team successfully filmed the highest altitude music video on land at an astonishing
-								elevation of
-								5,105 meters (16,748 feet 8.2 inches) in Tilicho, Nepal. This remarkable milestone has
-								earned a
-								place in the illustrious pages of the Guinness World Records, symbolizing the
-								perseverance,
-								creativity, and indomitable spirit of human endeavor.
-							</div>
-						</div>
-						<div class="text-right" style="margin-top: 50px; font-size: 16px;">
-							<span><a href="about.html"
-									style="color: #708acc; text-decoration: none; font-weight: bold;">See all</a></span>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
 
-	<section id="testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="events_home text-center clearfix">
-					<p>Reviews</p>
-					<h1>LOREM IPSUM DOLOR SED CURSUS DAPIBUS</h1>
-					<hr>
-				</div>
-				<div class="testimonial clearfix">
-					<div class="col-sm-4">
-						<div class="testimonial_inner clearfix">
-							<div class="col-sm-2">
-								<div class="testimonial_inner_left">
-									<h2><i class="fa fa-quote-left"></i></h2>
-								</div>
-							</div>
-							<div class="col-sm-10">
-								<div class="testimonial_inner_right">
-									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
-										sed augue semper porta.</p>
-									<h3>Conubia Nostra</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="testimonial_inner clearfix">
-							<div class="col-sm-2">
-								<div class="testimonial_inner_left">
-									<h2><i class="fa fa-quote-left"></i></h2>
-								</div>
-							</div>
-							<div class="col-sm-10">
-								<div class="testimonial_inner_right">
-									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
-										sed augue semper porta.</p>
-									<h3>Litora Torquent</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="testimonial_inner clearfix">
-							<div class="col-sm-2">
-								<div class="testimonial_inner_left">
-									<h2><i class="fa fa-quote-left"></i></h2>
-								</div>
-							</div>
-							<div class="col-sm-10">
-								<div class="testimonial_inner_right">
-									<p>Nulla quis sem at nibh elementum imperdiet Duis sagittis ipsum Fusce nec tellus
-										sed augue semper porta.</p>
-									<h3>Eget Nulla</h3>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="gallery_home">
+
+	<section id="google-reviews" style="padding-top: 60px; background-color:  #242a37; padding-bottom: 60px;">
+		<div class="container">
+			<div class="row">
+
+				<div style="display: flex; justify-content: center; padding: 40px;">
+					<h2 style="color: white;">What our clients say</h2>
+				</div>
+				<div id="reviews" style="display: flex; flex-direction: row;"></div>
+				<!-- Reviews will be loaded here -->
+
+				<!-- Buttons for Write a Review and View All Reviews -->
+				<div class="review-buttons text-center">
+					<a href="https://www.google.com/maps/place/?q=place_id:ChIJs0assRsZ6zkRCruKh_xC_IE" target="_blank"
+						class="view-all-reviews">View All Reviews</a>
+					<br />
+					<br />
+					<span>
+						<a href="https://search.google.com/local/writereview?placeid=ChIJs0assRsZ6zkRCruKh_xC_IE"
+							target="_blank" class="btn btn-primary">Write a Review</a>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<section id="feature_home">
 		<div class="container">
 			<div class="row">
 				<div class="events_home text-center clearfix">
 					<h1>OUR GALLERY</h1>
 					<hr>
 				</div>
-				<div class="gallery_home clearfix">
-					<div class="col-sm-7">
-						<div class="gallery_home_inner clearfix">
-							<img class="img-responsive" src="img/15.jpg">
-						</div>
+
+				<div style="display: flex; flex-direction: row; justify-content: center; gap: 10px; padding: 20px;">
+					<div class="gallery_home_inner clearfix">
+						<img class="img-responsive" src="img/gallery/1.png">
 					</div>
-					<div class="col-sm-5">
-						<div class="gallery_home_inner clearfix">
-							<img class="img-responsive" src="img/16.jpg">
+
+
+					<div class="maindiv">
+						<div class="col-sm-8" style="display: flex; flex-direction: row; padding: 0px; margin: 0px;">
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/2.png">
+								</div>
+							</div>
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/3.png">
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="gallery_home clearfix">
-					<div class="col-sm-5">
-						<div class="gallery_home_inner clearfix">
-							<img class="img-responsive" src="img/17.jpg">
-						</div>
-					</div>
-					<div class="col-sm-7">
-						<div class="gallery_home_inner clearfix">
-							<img class="img-responsive" src="img/18.jpg">
+						<div class="col-sm-8" style="display: flex; flex-direction: row; padding: 0px; margin: 0px;">
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/4.png">
+								</div>
+							</div>
+							<div class="">
+								<div class="gallery_home_inner clearfix">
+									<img class="img-responsive" src="img/gallery/5.png">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -765,6 +1034,223 @@
 			});
 		});
 	</script>
+
+
+	<script>
+		let offset = 0; // Track which reviews are being displayed
+		const reviewsPerPage = 5; // Display 5 reviews per page
+		let totalReviews = []; // Store all reviews fetched from the API
+		let carouselInitialized = false; // Check if the carousel is already initialized
+
+		function fetchPlaceDetails() {
+			const apiKey = 'AIzaSyDsJ4fvfeyHt7H9ckPucK3u4hHo3_Y-kak'; // Replace with your Google API Key
+			const placeId = 'ChIJs0assRsZ6zkRCruKh_xC_IE'; // Replace with your Place ID
+			const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
+			const url = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
+
+			fetch(url)
+				.then(response => response.json())
+				.then(data => {
+					const result = JSON.parse(data.contents); // Parse the result
+					if (result.result && result.result.reviews.length > 0) {
+						totalReviews = result.result.reviews; // Store all reviews
+						displayReviews(); // Display the initial set of reviews
+					} else {
+						document.getElementById('reviews').innerHTML = 'No reviews found.';
+					}
+				})
+				.catch(error => console.error('Error fetching data:', error));
+		}
+
+		// Function to render stars based on the rating
+		function renderStars(rating) {
+			let stars = '';
+			for (let i = 0; i < 5; i++) {
+				if (i < Math.floor(rating)) {
+					stars += '<i class="fas fa-star"></i>'; // Full star
+				} else if (i < rating) {
+					stars += '<i class="fas fa-star-half-alt"></i>'; // Half star
+				} else {
+					stars += '<i class="far fa-star"></i>'; // Empty star
+				}
+			}
+			return stars;
+		}
+
+		// Function to display reviews in batches of 5
+		function displayReviews() {
+			const reviewsDiv = document.getElementById('reviews');
+			let html = '';
+
+			// Get the next set of reviews based on the offset and reviewsPerPage
+			const reviewsToShow = totalReviews.slice(offset, offset + reviewsPerPage);
+			reviewsToShow.forEach(review => {
+				html += `
+				<div class="item">
+					<div class="review-card">
+						<h4>${review.author_name}</h4>
+						<div class="review-stars">${renderStars(review.rating)}</div>
+						<p>${review.text}</p>
+						<small>Reviewed on: ${new Date(review.time * 1000).toLocaleDateString()}</small>
+					</div>
+				</div>
+			`;
+			});
+
+			// If the carousel is already initialized, add new items
+			if (carouselInitialized) {
+				const owl = $('.owl-carousel').data('owl.carousel');
+				$(html).each(function () {
+					owl.add($(this)); // Append new items to the carousel
+				});
+			} else {
+				// If it's the first time, initialize the carousel
+				reviewsDiv.innerHTML = `<div class="owl-carousel">${html}</div>`;
+				initializeCarousel();
+			}
+
+			offset += reviewsPerPage; // Update the offset for the next batch
+		}
+
+		// Function to initialize Owl Carousel
+		function initializeCarousel() {
+			$('.owl-carousel').owlCarousel({
+				loop: true, // Enable continuous loop
+				margin: 10,
+				nav: true, // Enable navigation
+				navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"], // Custom icons
+				autoplay: true, // Enable autoplay
+				autoplayTimeout: 5000, // Set autoplay interval to 5 seconds
+				responsive: {
+					0: {
+						items: 1 // 1 item at a time for mobile
+					},
+					600: {
+						items: 2 // 2 items for tablets
+					},
+					1000: {
+						items: 3 // 3 items for larger screens
+					}
+				}
+			});
+			carouselInitialized = true; // Mark that the carousel is initialized
+		}
+
+		// Fetch place details on page load
+		window.onload = function () {
+			fetchPlaceDetails();
+
+			// Dynamically load header and footer
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		};
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+			let offset = 0;
+			const reviewsPerPage = 5;
+			let totalReviews = [];
+			let carouselInitialized = false;
+
+			function fetchPlaceDetails() {
+				const apiKey = 'YOUR_GOOGLE_API_KEY'; // Replace with your Google API Key
+				const placeId = 'ChIJs0assRsZ6zkRCruKh_xC_IE'; // Replace with your Place ID
+				const apiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
+				const url = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
+
+				fetch(url)
+					.then(response => response.json())
+					.then(data => {
+						const result = JSON.parse(data.contents);
+						if (result.result && result.result.reviews.length > 0) {
+							totalReviews = result.result.reviews;
+							displayReviews();
+						} else {
+							document.getElementById('reviews').innerHTML = 'No reviews found.';
+						}
+					})
+					.catch(error => console.error('Error fetching data:', error));
+			}
+
+			// Function to render stars based on the rating
+			function renderStars(rating) {
+				let stars = '';
+				for (let i = 0; i < 5; i++) {
+					if (i < Math.floor(rating)) {
+						stars += '<i class="fas fa-star"></i>'; // Full star
+					} else if (i < rating) {
+						stars += '<i class="fas fa-star-half-alt"></i>'; // Half star
+					} else {
+						stars += '<i class="far fa-star"></i>'; // Empty star
+					}
+				}
+				return stars;
+			}
+
+			// Function to display reviews in batches
+			function displayReviews() {
+				const reviewsDiv = document.getElementById('reviews');
+				let html = '';
+
+				const reviewsToShow = totalReviews.slice(offset, offset + reviewsPerPage);
+				reviewsToShow.forEach(review => {
+					html += `
+                <div class="item">
+                    <div class="review-card">
+                        <h4>${review.author_name}</h4>
+                        <div class="review-stars">${renderStars(review.rating)}</div>
+                        <p>${review.text}</p>
+                        <small>Reviewed on: ${new Date(review.time * 1000).toLocaleDateString()}</small>
+                    </div>
+                </div>
+            `;
+				});
+
+				if (carouselInitialized) {
+					const owl = $('.owl-carousel').data('owl.carousel');
+					$(html).each(function () {
+						owl.add($(this));
+					});
+				} else {
+					reviewsDiv.innerHTML = `<div class="owl-carousel">${html}</div>`;
+					initializeCarousel();
+				}
+
+				offset += reviewsPerPage;
+			}
+
+			// Initialize the Owl Carousel
+			function initializeCarousel() {
+				$('.owl-carousel').owlCarousel({
+					loop: true,
+					margin: 10,
+					nav: true,
+					navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+					autoplay: true,
+					autoplayTimeout: 5000,
+					responsive: {
+						0: {
+							items: 1
+						},
+						600: {
+							items: 2
+						},
+						1000: {
+							items: 3 // Display 3 items in a row
+						}
+					}
+				});
+				carouselInitialized = true;
+			}
+
+			// Load reviews on page load
+			fetchPlaceDetails();
+		});
+
+	</script>
+
 
 
 </body>
