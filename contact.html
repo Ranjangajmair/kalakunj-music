@@ -23,7 +23,8 @@
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
     #about_top_contact {
-        margin-top: 112px;
+        margin-top: 40px;
+        padding: 0px;
     }
 
 
@@ -86,6 +87,39 @@
     .whatsapp-float .my-float {
         margin-top: 16px;
     }
+
+    section {
+        position: relative;
+        padding-bottom: 40px;
+        /* Adds space for the neon effect */
+    }
+
+    section:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        /* Adjust the height of the neon line */
+        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+        /* Neon colors */
+        box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+        animation: neon 1.5s ease-in-out infinite alternate;
+    }
+
+    /* Neon glow animation */
+    @keyframes neon {
+        0% {
+            opacity: 0.8;
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+        }
+
+        100% {
+            opacity: 1;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+        }
+    }
 </style>
 
 <body>
@@ -118,7 +152,8 @@
                             <h1>CONTACT US</h1>
                             <hr>
                             <p style="margin-top: 15px;"><i class="fa fa-user"></i> Arjun Basnyat ( Nishnat ) </p>
-                            <p style="margin-top: 15px;"><i class="fa fa-mobile"></i> +9843637209</p>
+                            <p style="margin-top: 15px;"><i class="fa fa-whatsapp"></i> +977-9851084138 </p>
+                            <p style="margin-top: 15px;"><i class="fa fa-mobile"></i> +977-9843637209</p>
                             <p style="margin-top: 15px;"><i class="fa fa-phone"></i> 01-5369738</p>
                             <p style="margin-top: 15px;"><i class="fa fa-envelope"></i> nishant.banyat@gmail.com</p>
                             <p style="margin-top: 15px;"><i class="fa fa-map-marker"></i> Putalisadak, Kathmandu Nepal
@@ -181,9 +216,9 @@
         </div>
     </section>
 
-    <section id="footer">
+    <div id="footer">
         <div id="footer-container"></div>
-    </section>
+    </div>
 
 
     <script src="js/classie.js"></script>

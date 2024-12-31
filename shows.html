@@ -21,7 +21,8 @@
 <!-- Embedded CSS for mobile responsiveness and WhatsApp button styling -->
 <style>
 	#about_top_shows {
-		margin-top: 112px;
+		margin-top: 50px;
+		padding: 0px;
 	}
 
 
@@ -123,9 +124,40 @@
 			margin-top: 0px;
 			padding-top: 0px;
 		}
+	}
 
 
+	section {
+		position: relative;
+		padding-bottom: 40px;
+		/* Adds space for the neon effect */
+	}
 
+	section:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		/* Adjust the height of the neon line */
+		background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+		/* Neon colors */
+		box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		animation: neon 1.5s ease-in-out infinite alternate;
+	}
+
+	/* Neon glow animation */
+	@keyframes neon {
+		0% {
+			opacity: 0.8;
+			box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff;
+		}
+
+		100% {
+			opacity: 1;
+			box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+		}
 	}
 </style>
 
@@ -261,9 +293,9 @@
 		</div>
 	</section>
 
-	<section id="footer">
+	<div id="footer">
 		<div id="footer-container"></div>
-	</section>
+	</div>
 
 
 
